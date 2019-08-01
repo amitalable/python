@@ -31,7 +31,7 @@ class SublistSearch:
 a = Node(1)
 a.nextval = Node(2)
 a.nextval.nextval = Node(3)
-a.nextval.nextval.nextval = Node(4)
+a.nextval.nextval.nextval = Node(5)
 
 b = Node(1)
 b.nextval = Node(2)
@@ -40,9 +40,8 @@ b.nextval.nextval.nextval = Node(2)
 b.nextval.nextval.nextval.nextval = Node(3)
 b.nextval.nextval.nextval.nextval.nextval = Node(4)
 
-c = SublistSearch()
-d = c.findList(a,b)
-if d == True:
+
+if SublistSearch().findList(a,b) == True:
   print("Found")
 else:
   print("Not Found")
