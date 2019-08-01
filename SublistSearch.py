@@ -41,7 +41,7 @@ class SublistSearch:
 a = Node(1)
 a.nextval = Node(2)
 a.nextval.nextval = Node(3)
-a.nextval.nextval.nextval = Node(5)
+a.nextval.nextval.nextval = Node(4)
 
 b = Node(1)
 b.nextval = Node(2)
