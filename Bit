@@ -1,0 +1,27 @@
+def decimalToBinary(n):  
+    return bin(n).replace("0b", "")  
+
+def totalFlips(A, B, C, N): 
+    count = 0
+    for i in range(N): 
+        if A[i] == B[i] and C[i] == '1': 
+            count+=1  
+        elif A[i] != B[i] and C[i] == '0': 
+            count+=1
+    return count 
+
+x = decimalToBinary(int(input()))
+y = decimalToBinary(int(input()))
+z = decimalToBinary(int(input()))
+
+max_len = max(len(x),len(y),len(z))
+if len(x)!= max_len:
+    for i in range(max_len-len(x)):
+        x = "0"+x 
+elif len(y)!= max_len:
+    for i in range(max_len-len(y)):
+        y = "0"+y 
+elif len(z)!= max_len:
+    for i in range(max_len-len(z)):
+        z = "0"+z 
+print(totalFlips(x, y, z, max_len))
